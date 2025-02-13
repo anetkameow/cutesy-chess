@@ -112,6 +112,8 @@ class ChessApp(wx.App):
         self.frame = wx.Frame(None, title="🎀 Chess in wxPython 🎀", size=(495, 535),
                               style=wx.DEFAULT_FRAME_STYLE & ~wx.RESIZE_BORDER)
         self.frame.SetBackgroundColour(wx.Colour(255, 182, 193))
+        # Ustawienie ograniczeń rozmiaru okna
+        self.frame.SetSizeHints(495, 535, 495, 535)
 
         self.panel = ChessPanel(self.frame)
         self.frame.Bind(wx.EVT_CLOSE, self.on_close)
